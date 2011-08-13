@@ -1,0 +1,6 @@
+If you want to run Mandy on you local machine
+  1. Install hadoop (brew install hadoop)
+  2. Set HADOOP_HOME (.bashrc ?) (/usr/local/Cellar/hadoop/0.20.2)
+
+Test the code :
+  mandy-local lib/job.rb fixtures/WhosSeenWho-dump.txt results/

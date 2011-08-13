@@ -1,0 +1,19 @@
+GIT
+  remote: https://github.com/forward/mandy.git
+  revision: 3f6e4c889abc8d76c6520164d0e1f14d9118286d
+  specs:
+    mandy (0.5.26)
+      json
+      libxml-ruby
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    json (1.5.3)
+    libxml-ruby (2.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mandy!
