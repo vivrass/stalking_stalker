@@ -4,3 +4,17 @@ If you want to run Mandy on you local machine
 
 Test the code :
   mandy-local lib/job.rb fixtures/WhosSeenWho-dump.txt results/
+
+Execute the code :
+  Log in the server : ssh -i ~/.ssh/hackreduce.pem hadoop@hackreduce-cluster-{CLUSTER NUMBER}.hopper.to
+  Clone the repo : git clone git@github.com:vivrass/stalking_stalker.git
+  Install mandy globally on all nodes : dsh -c -g all "sudo gem install mandy"; sudo gem install mandy
+  You'll maybe need to install libxml if the mandy gem was not updated : dsh -c -g all "sudo gem install libxml-ruby"; sudo gem install libxml
+
+  Go to the project folder : cd stalking_stalker
+  Run the job : mandy-hadoop lib/job.rb /datasets/mate1/whos_seen_who/WhosSeenWho-dump.txt /users/vivrass
+
+
+Get back the results:
+  Extract the file from hdfs : bin/hadoop dfs -getmerge /users/vivrass/1-stalking-stalker ~/users/vivrass/stalking_stalker.txt
+  Scp it : scp -i ~/.ssh/hackreduce.pem hadoop@hackreduce-cluster-5.hopper.to:users/vivrass/*.txt .
