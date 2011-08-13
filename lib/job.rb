@@ -1,6 +1,6 @@
 Mandy.job "Stalking Stalker" do
-  map_tasks 5
-  reduce_tasks 3
+  #map_tasks 5
+  #reduce_tasks 3
 
   map do |line|
     stalker, stalking, date = line.split ","
